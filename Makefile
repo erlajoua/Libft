@@ -6,7 +6,7 @@
 #    By: user42 <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 12:10:09 by user42            #+#    #+#              #
-#    Updated: 2020/11/16 18:33:07 by user42           ###   ########.fr        #
+#    Updated: 2020/11/16 19:47:15 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,10 @@ BSRCS	=	ft_lstnew.c					\
 			ft_lstsize.c				\
 			ft_lstlast.c				\
 			ft_lstadd_back.c			\
-			ft_lstclear.c \	
+			ft_lstclear.c				\
+			ft_lstmap.c					\
+			ft_lstiter.c				\
+			ft_lstdelone.c
 
 BOBJS	=	$(BSRCS:.c=.o)
 

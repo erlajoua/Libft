@@ -1,43 +1,46 @@
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/16 11:32:03 by user42            #+#    #+#             */
+/*   Updated: 2020/11/16 11:33:24 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/*Description, creer une nouvelle chaine et la malloc, de taille len et commençant depuis start*/
+#include "libft.h"
 
-int     ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while(str[i])
-        i++;
-    return(i);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char *str;
-    char *cpy;
-    int i;
+	char	*str;
+	char	*cpy;
+	int		i;
 
-    i = 0;
-    str = (char *)s;
-    if (!s)
+	i = 0;
+	str = (char *)s;
+	if (!s)
 		return (NULL);
-    if ((cpy = (char*)malloc(sizeof(char) * len + 1)) == NULL)
-        return (NULL);
-    while(str[start] && len > 0)
-    {
-        cpy[i] = str[start];
-        start++;
-        i++;
-        len--;
-    }
-    cpy[i] = '\0';
-    return (cpy);
-}
-
-int main(void)
-{
-    printf("god : %s",ft_substr("salut",3,5));
-    return (0);
+	if ((cpy = (char*)malloc(len + 1)) == NULL)
+		return (NULL);
+	while (str[start] && len > 0)
+	{
+		cpy[i] = str[start];
+		start++;
+		i++;
+		len--;
+	}
+	cpy[i] = '\0';
+	return (cpy);
 }

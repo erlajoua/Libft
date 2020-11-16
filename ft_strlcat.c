@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 11:41:59 by user42            #+#    #+#             */
-/*   Updated: 2020/11/16 11:44:43 by user42           ###   ########.fr       */
+/*   Created: 2020/11/16 11:28:11 by user42            #+#    #+#             */
+/*   Updated: 2020/11/16 11:28:12 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
 	while (str[i])
@@ -22,29 +22,22 @@ int		ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	char	*str1;
-	char	*str2;
-	char	*dest;
-	int		i;
-	int		j;
+	unsigned int i;
+	unsigned int dest_len;
+	unsigned int src_len;
 
-	i = -1;
-	j = 0;
-	if (!s1 || !s2)
-		return (NULL);
-	str1 = (char *)s1;
-	str2 = (char *)s2;
-	if (!(dest = (char *)malloc(ft_strlen(str1) + ft_strlen(str2) + 1)))
-		return (NULL);
-	while (str1[++i])
-		dest[i] = str1[i];
-	while (str2[j])
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
+	i = 0;
+	if (size <= dest_len)
+		return (src_len + size);
+	while (src[i] && dest_len + i < size - 1)
 	{
-		dest[i + j] = str2[j];
-		j++;
+		dest[dest_len + i] = src[i];
+		i++;
 	}
-	dest[i + j] = '\0';
-	return (dest);
+	dest[dest_len + i] = '\0';
+	return (dest_len + src_len);
 }

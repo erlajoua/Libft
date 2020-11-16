@@ -1,14 +1,23 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/16 10:51:31 by user42            #+#    #+#             */
+/*   Updated: 2020/11/16 10:51:56 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-//a tester
+#include "libft.h"
 
 void    *ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-    unsigned char *source;
-    unsigned char *dst;
-    unsigned char carac;
-    int i;
+    unsigned char	*source;
+    unsigned char	*dst;
+    unsigned char	carac;
+    int				i;
 
     i = 0;
     source = (unsigned char*)src;
@@ -26,13 +35,4 @@ void    *ft_memccpy(void *dest, const void *src, int c, size_t n)
         n--;
     }
     return (dst);
-}
-
-int main(void)
-{
-    char destination[]="0123456789";
-    char soursse[]="salut";
-    ft_memccpy(destination,soursse,'x',4);
-    puts(destination);
-    return (0);
 }

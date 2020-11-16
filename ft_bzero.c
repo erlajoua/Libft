@@ -1,29 +1,28 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/16 10:42:14 by user42            #+#    #+#             */
+/*   Updated: 2020/11/16 10:43:25 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    ft_bzero(void *s, size_t n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-    int *arr;
+	int *arr;
 
-    arr = (int*)s;
-    if (n == 0)
-        return;
-    while (n > 0)
-    {
-        *arr = 0;
-        arr++;
-        n--;
-    }
+	arr = (int*)s;
+	if (n == 0)
+		return ;
+	while (n > 0)
+	{
+		*arr = 0;
+		arr++;
+		n--;
+	}
 }
-
-int main( void )
-  {
-    int arr[6] = {1,3,6,9,12,15};
-    int i = 0;
-    ft_bzero(arr, 4);
-    for (i = 0;i < 6;i++)
-    {
-      printf("%i = %i\n",i,arr[i]);
-    }
-  }

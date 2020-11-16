@@ -1,18 +1,20 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/16 11:19:41 by user42            #+#    #+#             */
+/*   Updated: 2020/11/16 11:20:59 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char    *ft_strchr(char *s, int c)
-{
-    while(s && *s != c)
-        s++;
-    return (s);
-}
+#include "libft.h"
 
-int main(void)
+char	*ft_strchr(char *s, int c)
 {
-    char *str="018234856789";
-    char c = 'a';
-    printf("%s\n",strchr(str,'8'));
-    printf("%s\n",ft_strchr(str,'8'));
-    return (0);
+	while (*s && *s != c)
+		s++;
+	return (s);
 }

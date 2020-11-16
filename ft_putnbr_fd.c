@@ -1,9 +1,20 @@
-#include <stdio.h>
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/16 11:50:51 by user42            #+#    #+#             */
+/*   Updated: 2020/11/16 11:51:16 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    ft_putchar_fd(char c, int fd)
+#include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd, &c, 1);
+	write(fd, &c, 1);
 }
 
 void	ft_putnbr_fd(int n, int fd)
@@ -26,10 +37,4 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putchar_fd(nbr + '0', fd);
 	}
-}
-
-int main(void)
-{
-    ft_putnbr_fd(44589479,1);
-    return (0);
 }

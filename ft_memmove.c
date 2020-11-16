@@ -1,10 +1,22 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/16 10:57:46 by user42            #+#    #+#             */
+/*   Updated: 2020/11/16 11:00:21 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t				i;
-	unsigned char		*ptr_dst;
-	const unsigned char	*ptr_src;
+	size_t					i;
+	unsigned char			*ptr_dst;
+	const unsigned char		*ptr_src;
 
 	if (!dst && !src)
 		return (NULL);
@@ -13,21 +25,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if (ptr_dst > ptr_src)
 		while (++i <= len)
-        {
-            puts("test");
+		{
 			ptr_dst[len - i] = ptr_src[len - i];
-        }
+		}
 	else
 		while (len-- > 0)
 			*(ptr_dst++) = *(ptr_src++);
 	return (dst);
-}
-
-int main(void)
-{
-    char dest[]="0123456789";
-    char source[]="salut";
-    ft_memmove(dest,source,4);
-    puts(dest);
-    return (0);
 }

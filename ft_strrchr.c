@@ -1,26 +1,29 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/16 11:21:22 by user42            #+#    #+#             */
+/*   Updated: 2020/11/16 11:21:51 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char    *ft_strrchr(char *s, int c)
-{
-    while(*s)
-        s++;
-    s--;
-    if (*s == c)
-        return (s);
-    while(*s != 'c')
-    {
-        s--;
-        if (*s == c)
-            return (s);
-    }
-    return (NULL);
-}
+#include "libft.h"
 
-int main(void)
+char	*ft_strrchr(char *s, int c)
 {
-    char *str="018234856789";
-    printf(":%s\n",strrchr(str,'x'));
-    printf(":%s",ft_strrchr(str,'x'));
-    return (0);
+	while (*s)
+		s++;
+	s--;
+	if (*s == c)
+		return (s);
+	while (*s != 'c')
+	{
+		s--;
+		if (*s == c)
+			return (s);
+	}
+	return (NULL);
 }

@@ -1,32 +1,33 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/16 11:02:28 by user42            #+#    #+#             */
+/*   Updated: 2020/11/16 11:03:49 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    *ft_memchr(const void *s, int c, size_t n)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    unsigned char *str;
-    unsigned char i;
+	unsigned char *str;
+	unsigned char i;
 
-    if (!str)
-        return (NULL);
-    str = (unsigned char*)s;
-    i = (unsigned char)c;
-    while (n > 0)
-    {
-        if (*str == i)
-            return (str);
-        else
-            str++;
-        n--;
-    }
-    return (NULL);
-}
-
-int main(void)
-{
-    char str[]="bonjouratousjesuiserwan";
-    printf("%s\n",str);
-    printf("%s\n",memchr(str,'j',24));
-    printf("%s\n",str);
-    printf("%s\n",ft_memchr(str,'j',24));
-    return (0);
+	if (!str)
+		return (NULL);
+	str = (unsigned char*)s;
+	i = (unsigned char)c;
+	while (n > 0)
+	{
+		if (*str == i)
+			return (str);
+		else
+			str++;
+		n--;
+	}
+	return (NULL);
 }

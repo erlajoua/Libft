@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 11:48:10 by user42            #+#    #+#             */
-/*   Updated: 2020/11/16 15:53:35 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/16 20:42:25 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	size = ft_count_word(str, c);
 	dest = (char **)malloc(sizeof(char *) * (size + 1));
+	if (!dest)
+		return (NULL);
 	while (*str)
 	{
 		while (*str && *str == c)

@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 11:46:15 by user42            #+#    #+#             */
-/*   Updated: 2020/11/16 11:47:47 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/16 20:41:49 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strdup(const char *s)
 	while (s[i])
 		i++;
 	dest = (char *)malloc(sizeof(char) * i + 1);
+	if (!dest)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{

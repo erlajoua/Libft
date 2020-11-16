@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 12:06:06 by user42            #+#    #+#             */
-/*   Updated: 2020/11/16 15:49:02 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/16 15:50:29 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,27 @@
 
 char	*ft_itoa(int n)
 {
-	char	*str;
 	int		len;
-	int		cpy;
+	long	nbr;
+	char	*str;
 
-	cpy = n;
-	if (n == -2147483648)
-		return ("-2147483648");
-	len = (cpy > 0) ? 0 : 1;
-	cpy = (cpy > 0) ? cpy : -cpy;
-	if (n == 0)
-		return ("0");
-	while (n != 0)
-		n = (len++) ? n / 10 : n / 10;
-	str = (char *)malloc(sizeof(char) * len + 1);
+	nbr = n;
+	len = (nbr > 0) ? 0 : 1;
+	nbr = (nbr > 0) ? nbr : -nbr;
+	while (n)
+		n = len++ ? n / 10 : n / 10;
+	str = malloc(sizeof(char *) * len + 1);
 	if (!str)
 		return (NULL);
-	str[0] = '-';
-	str[len] = '\0';
-	while (cpy != 0)
+	*(str + len--) = '\0';
+	while (nbr > 0)
 	{
-		str[--len] = (cpy % 10) + '0';
-		cpy /= 10;
+		*(str + len--) = nbr % 10 + '0';
+		nbr /= 10;
 	}
+	if (len == 0 && str[1] == '\0')
+		*(str + len) = '0';
+	if (len == 0 && str[1] != '\0')
+		*(str + len) = '-';
 	return (str);
 }
-
-/*
-int main()
-{
-    printf("|%s|\n",ft_itoa(-2147483648));
-
-    return 0;
-}*/

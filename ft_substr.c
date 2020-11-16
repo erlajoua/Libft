@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 11:32:03 by user42            #+#    #+#             */
-/*   Updated: 2020/11/16 20:38:51 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/16 20:39:30 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	str = (char *)s;
-	if ((int)start > ft_strlen(s))
+	if ((int)start > ft_strlen(str))
 	{
 		zr = malloc(1);
 		zr[0] = '\0';

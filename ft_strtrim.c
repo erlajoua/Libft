@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 11:33:55 by user42            #+#    #+#             */
-/*   Updated: 2020/11/16 12:27:10 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/16 16:02:45 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,29 +21,6 @@ int		ft_isset(char *str, char *wrong)
 		wrong++;
 	}
 	return (0);
-}
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*str;
-	char	*cpy;
-	int		i;
-
-	i = 0;
-	str = (char *)s;
-	if (!s)
-		return (NULL);
-	if ((cpy = (char*)malloc(len + 1)) == NULL)
-		return (NULL);
-	while (str[start] && len > 0)
-	{
-		cpy[i] = str[start];
-		start++;
-		i++;
-		len--;
-	}
-	cpy[i] = '\0';
-	return (cpy);
 }
 
 char	*count_malloc(char *str, char *wrong)

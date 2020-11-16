@@ -1,28 +1,22 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/16 12:02:57 by user42            #+#    #+#             */
+/*   Updated: 2020/11/16 12:03:09 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/*
-#1. L’adresse du pointeur vers le premier élément
-de la liste.
-#2. L’adresse du pointeur vers l’élément à rajouter
-à la liste.
-*/
+#include "libft.h"
 
-typedef struct      s_list
+void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-    void            *content;
-    struct          s_list *next;
-}                   t_list;
-
-void ft_lstadd_front(t_list **alst, t_list *new)
-{
-    if (alst && new)
-    {
-        new->next = *alst;
-        *alst = new;
-    }
-}
-
-int main (void)
-{
-    return (0);
+	if (alst && new)
+	{
+		new->next = *alst;
+		*alst = new;
+	}
 }

@@ -1,16 +1,22 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/16 12:02:03 by user42            #+#    #+#             */
+/*   Updated: 2020/11/16 12:02:15 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list		*ft_lstlast(t_list *lst)
 {
-    if (!lst)
-        return (NULL);
-    while (lst->next != 0)
-        lst = lst->next;
-    return (lst);
-}
-
-int main(void)
-{
-    return (0);
+	if (!lst)
+		return (NULL);
+	while (lst->next != 0)
+		lst = lst->next;
+	return (lst);
 }

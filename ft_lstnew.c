@@ -1,26 +1,25 @@
-#include <stdlib.h>
-#include <stdio.h>
-#
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/16 11:59:24 by user42            #+#    #+#             */
+/*   Updated: 2020/11/16 12:01:35 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-typedef struct      s_list
+#include "libft.h"
+
+t_list		*ft_lstnew(void *content)
 {
-    void            *content;
-    struct          s_list *next;
-}                   t_list;
+	t_list *list;
 
-t_list *ft_lstnew(void *content)
-{
-    t_list *list;
-    list = malloc(sizeof(t_list));
-    if (!list)
-        return (NULL);
-    list->content = content;
-    list->next = NULL;
-
-    return (list);
-
-}
-
-int main(void)
-{
+	list = malloc(sizeof(t_list));
+	if (!list)
+		return (NULL);
+	list->content = content;
+	list->next = NULL;
+	return (list);
 }

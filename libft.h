@@ -43,12 +43,11 @@ char					*ft_substr(char const *s,
 int						ft_tolower(int c);
 int						ft_toupper(int c);
 
-struct					s_list
+typedef struct      s_list
 {
-	void				*content;
-	struct s_list		*next;
-};
-typedef struct s_list	t_list;
+	void            *content;
+	struct          s_list *next;
+}                   t_list;
 
 t_list					*ft_lstnew(void *content);
 void					ft_lstadd_front(t_list **alst, t_list *new);

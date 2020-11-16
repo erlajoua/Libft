@@ -1,13 +1,18 @@
-#include <stdio.h>
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/16 11:57:15 by user42            #+#    #+#             */
+/*   Updated: 2020/11/16 11:57:44 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    ft_putchar_fd(char c, int fd)
-{
-    write(fd, &c, 1);
-}
+#include "libft.h"
 
-int main(void)
+void	ft_putchar_fd(char c, int fd)
 {
-    ft_putchar_fd('x',1);
-    return (0);
+	write(fd, &c, 1);
 }

@@ -6,21 +6,11 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 11:38:52 by user42            #+#    #+#             */
-/*   Updated: 2020/11/16 11:39:36 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/16 20:24:03 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

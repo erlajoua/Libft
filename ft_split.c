@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 11:48:10 by user42            #+#    #+#             */
-/*   Updated: 2020/11/16 11:50:10 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/16 15:53:35 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,8 @@ char	**ft_split(char const *s, char c)
 			str++;
 		if (*str && *str != c)
 		{
-			i++;
 			dest[i] = ft_strcpyt(str, c);
+			i++;
 			while (*str && *str != c)
 				str++;
 		}

@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 11:30:10 by user42            #+#    #+#             */
-/*   Updated: 2020/11/16 11:30:31 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/16 12:26:38 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	char	*big;
 	char	*little;
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 
 	big = (char *)haystack;
 	little = (char *)needle;

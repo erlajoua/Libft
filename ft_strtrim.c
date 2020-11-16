@@ -6,21 +6,11 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 11:33:55 by user42            #+#    #+#             */
-/*   Updated: 2020/11/16 11:38:05 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/16 12:27:10 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 int		ft_isset(char *str, char *wrong)
 {
@@ -76,7 +66,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char *str;
 	char *wrong;
-	char *dest;
 
 	str = (char *)s1;
 	wrong = (char *)set;

@@ -6,7 +6,7 @@
 #    By: user42 <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 12:10:09 by user42            #+#    #+#              #
-#    Updated: 2020/11/16 12:10:21 by user42           ###   ########.fr        #
+#    Updated: 2020/11/16 14:32:29 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCS	=	ft_atoi.c			\
 			ft_isdigit.c		\
 			ft_itoa.c			\
 			ft_memcpy.c			\
+			ft_memset.c			\
 			ft_memccpy.c		\
 			ft_memmove.c		\
 			ft_memchr.c			\

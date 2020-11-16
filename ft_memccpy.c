@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:51:31 by user42            #+#    #+#             */
-/*   Updated: 2020/11/16 11:58:52 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/16 14:48:22 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		if (source[i] == carac)
 		{
 			dst[i] = source[i];
-			return (dst);
+			return (&dst[i]);
 		}
 		dst[i] = source[i];
 		i++;

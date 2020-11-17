@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 11:48:10 by user42            #+#    #+#             */
-/*   Updated: 2020/11/16 20:42:25 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/17 10:36:41 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strcpyt(char *str, char c)
 	return (dest);
 }
 
-int		ft_count_word(char *str, char c)
+int		cw(char *str, char c)
 {
 	int i;
 
@@ -56,14 +56,13 @@ char	**ft_split(char const *s, char c)
 {
 	char	*str;
 	char	**dest;
-	int		size;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	str = (char *)s;
 	i = 0;
-	size = ft_count_word(str, c);
-	dest = (char **)malloc(sizeof(char *) * (size + 1));
-	if (!dest)
+	if (!(dest = (char **)malloc(sizeof(char *) * (cw(str, c) + 1))))
 		return (NULL);
 	while (*str)
 	{

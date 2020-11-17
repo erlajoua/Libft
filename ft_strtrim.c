@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 11:33:55 by user42            #+#    #+#             */
-/*   Updated: 2020/11/16 16:02:45 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/17 10:34:41 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char *str;
 	char *wrong;
 
+	if (!s1 || !set)
+		return (NULL);
 	str = (char *)s1;
 	wrong = (char *)set;
 	return (count_malloc(str, wrong));
